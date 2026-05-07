@@ -18,6 +18,7 @@ const checkType = (input: StringOrNumber): string => {
         return "String";
     }
 }
+// console.log(checkType(23));
 
 const getProperty = <T, X extends keyof T>(obj: T, key: X): T[X] => {
     return obj[key];
@@ -64,5 +65,5 @@ const getIntersection = (
     number[] => {
     return arrayOfX.filter(num => arrayOfY.includes(num));
 };
-// console.log(getIntersection([1, 2, 3, 4, 5], [3, 4, 5, 6, 7]));
+console.log(getIntersection([1, 2, 3, 4, 5], [3, 4, 5, 6, 7]));
 
